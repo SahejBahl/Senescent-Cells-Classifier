@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>seneSENSE</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  </head>
+  <body>
+    <header>
+      <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img style="max-width: 20%; height: auto;" src={{ url_for('static', filename='Logo.png')}}>
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <div class="ms-auto"></div>
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="DetectionTool"
+                    >Senescence Detection Tool</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/patient-history">Patient History</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-7 col-sm-12">
+            <h1 class="intro">Introducing seneSENSE </h1>
+            <p class="intro">
+              The centralized platform for healthcare providers to identify
+              senescence and promote human longevity.
+            </p>
+          </div>
+          <div class="col-md-5 col-sm-12">
+            <div class="Logo">
+              
+              <img style="max-width: 50%; height: auto;" src={{ url_for('static', filename='Logo.png')}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section-1">
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-md-7">
+              <div class="sencell-1">
+                <img style="max-width: 100%; height: auto;"src="{{ url_for('static', filename='Rando.png')}}"
+                align="right"/>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <h1>What are Senescent Cells?</h1>
+              <p class="pt-4">
+                Senescent cells are human cells that have stopped dividing, but
+                have not died. They can be harmful in that they may cause cancer
+                and other skin-related diseases, if generated in excess.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-2 container-fluid p-0">
+        <div class="container text-center">
+          <div class="cover">
+            <h1>How does senescent cell detection work?</h1>
+            <p>
+              Senescent cell detection is done by analyzing a sample of skin
+              cells under a microscope, and injecting it with a fluorescent
+              substance that highlights which cells are senescent by turning
+              them blue. The problem lies in the fact that visually monitoring
+              the occurrence of senescent cells does not aid in identifying
+              whether a person is at risk for cancer.
+            </p>
+            <p>
+              Our solution involves a Machine Learning model, which takes the
+              photos of senescent cells, procured from lab technicians, and
+              presents a senescence confidence level. If the confidence level is
+              above 80%, the patient is recommended to see their family doctor
+              or primary physician to determine if they are at risk.
+            </p>
+          </div>
+          <div class="container-fluid text-center"></div>
+        </div>
+      </section>
+      <button class="btn btn-light px-5 py-2" type="button">
+        Get started.
+      </button>
+    </main>
+
+    <footer></footer>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
